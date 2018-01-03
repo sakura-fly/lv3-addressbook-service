@@ -12,7 +12,7 @@ import dao.ContactDao;
 import dao.impl.ContactDaoImpl;
 import entity.Contact;
 
-@WebServlet("/updatecontact")
+@WebServlet("/contact/update")
 public class ContactUpdate extends HttpServlet{
 
 	@Override

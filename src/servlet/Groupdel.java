@@ -9,19 +9,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.ContactDao;
-import dao.impl.ContactDaoImpl;
-import entity.UserAb;
+import dao.GroupDao;
+import dao.impl.GroupDaoImpl;
+import entity.Group;
 
-@WebServlet("/contact/list")
-public class ContactList extends HttpServlet{
+@WebServlet("group/del")
+public class Groupdel extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		int uid = Integer.parseInt(req.getParameter("uid"));
-		ContactDao cd = new ContactDaoImpl();
-		List<UserAb> ua = cd.listContact(uid);
-		resp.getWriter().println(ua);
+		GroupDao gd = new GroupDaoImpl();
+		int res = gd.del(Integer.parseInt(req.getParameter("id")));
+		resp.getWriter().println(res);
 	}
 
 }

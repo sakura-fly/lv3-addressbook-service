@@ -1,6 +1,9 @@
 package dao.impl;
 
+import java.util.List;
+
 import dao.GroupDao;
+import entity.Group;
 
 public class GroupDaoImpl implements GroupDao{
 
@@ -11,9 +14,8 @@ public class GroupDaoImpl implements GroupDao{
 	}
 
 	@Override
-	public int list(int uid) {
-		// TODO Auto-generated method stub
-		return 0;
+	public List<Group> list(int uid) {
+		return null;
 	}
 
 	@Override
@@ -21,5 +23,12 @@ public class GroupDaoImpl implements GroupDao{
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+	@Override
+	public int changeGro(int cid, int gid) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 
 }
