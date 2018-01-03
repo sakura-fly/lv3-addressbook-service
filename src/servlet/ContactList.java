@@ -14,7 +14,7 @@ import dao.impl.ContactDaoImpl;
 import entity.UserAb;
 
 @WebServlet("/listcontact")
-public class ListContact extends HttpServlet{
+public class ContactList extends HttpServlet{
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

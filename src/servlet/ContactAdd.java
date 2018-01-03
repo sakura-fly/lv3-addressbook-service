@@ -12,13 +12,12 @@ import dao.ContactDao;
 import dao.impl.ContactDaoImpl;
 import entity.Contact;
 
-@WebServlet("/updatecontact")
-public class UpdateContact extends HttpServlet{
+@WebServlet("/addcontact")
+public class ContactAdd extends HttpServlet{
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		Contact c = new Contact();
-		c.setId(Integer.parseInt(req.getParameter("id")));
 		c.setName(req.getParameter("name"));
 		c.setSex(req.getParameter("sex"));
 		c.setBirthday(req.getParameter("birthday"));
@@ -28,7 +27,7 @@ public class UpdateContact extends HttpServlet{
 		c.setGroup(req.getParameter("group"));
 		c.setRemark(req.getParameter("remark"));
 		ContactDao cd = new ContactDaoImpl();
-		int res = cd.update(c);
+		int res = cd.add(c);
 		resp.getWriter().println(res);
 	}
 
