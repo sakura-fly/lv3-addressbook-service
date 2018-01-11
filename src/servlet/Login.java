@@ -16,7 +16,7 @@ public class Login extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String useid= req.getParameter("userid");
+		String useid= req.getParameter("userName");
 		String pwd = req.getParameter("pwd");
 		UserDao ud = new UserDaoImpl() ;
 		int res = ud.login(useid, pwd);

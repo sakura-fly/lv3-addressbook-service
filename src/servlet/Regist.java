@@ -19,8 +19,7 @@ public class Regist extends HttpServlet{
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		User u = new User();
 		u.setHobby(req.getParameter("hobby"));
-		u.setName(req.getParameter("name"));
-		u.setUserid(req.getParameter("userid"));
+		u.setUserName(req.getParameter("userName"));
 		u.setPassword(req.getParameter("pwd"));
 		u.setRemark(req.getParameter("remark"));
 		UserDao ud = new UserDaoImpl();
